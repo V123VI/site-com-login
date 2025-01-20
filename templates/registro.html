@@ -6,13 +6,18 @@
     <title>Login</title>
 </head>
 <body>
-    <form action="{{ url_for('REGISTRO.login') }}" method="POST">
+    <form action="{{ url_for('REGISTRO.login') }}" method="POST" id="form-de-login">
         <input type="text" name="usuario" placeholder="Usuário">
         <input type="password" name="senha" placeholder="Senha">
         <button type="submit">Entrar</button>
+        <Label id="mensagem">Mensagem para exibir</Label>
     </form>
     
-    
+    <script src="/static/js/showmsg.js">
+
+
+
+    </script>
     
 </body>
 </html>

@@ -21,7 +21,7 @@ app.register_blueprint(home_bp)  # Registra o Blueprint de Home
 @app.cli.command('rodar')
 def rodar():
     with app.app_context():
-        Usuario.criar_usuario('vini','teste@gmail.com','123')
+        Usuario.mostrartudo()
         
 
 

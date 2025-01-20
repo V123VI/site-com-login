@@ -18,9 +18,10 @@ def login():
         if user and user.senha == senha:
             flash('Login Realizado Com Sucesso')
             return redirect(url_for('home.home'))
+        
         else:
-            flash('Login Incorreto')
-            return redirect(url_for('REGISTRO.registro'))
+            return jsonify({'status':'error','message':'Login Invalido'}),401
+            
     if request.method =='GET':
         return render_template('registro.html')
 
