@@ -2,7 +2,6 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 
-# Inicializa o aplicativo Flask
 
 db = SQLAlchemy()
 
