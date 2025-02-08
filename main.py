@@ -1,6 +1,7 @@
 from flask import *
 from blueprints.registro import registro_bp
 from blueprints.home import home_bp
+from blueprints.criarconta import criarconta_bp
 from db import *
 import click
 
@@ -16,14 +17,14 @@ db.init_app(app)
 
 app.register_blueprint(registro_bp)  # Registra o Blueprint de Registro
 app.register_blueprint(home_bp)  # Registra o Blueprint de Home
-
+app.register_blueprint(criarconta_bp)
 ##rodar as operações: 
 @app.cli.command('rodar')
 def rodar():
     with app.app_context():
         Usuario.mostrartudo()
         
-
+#pra mostrar todos os usuarios do banco de dados é só escrever no terminal "flask --app main.py rodar"
 
 if __name__ == "__main__":
     app.run(debug=True)

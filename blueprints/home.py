@@ -4,7 +4,7 @@ from db import Usuario
 
 home_bp = Blueprint('home', __name__, template_folder='templates')
 
-# Decorador para verificar se o usuário está logado
+
 def require_login(func):
     def wrapper(*args, **kwargs):
         if 'usuario_id' not in session:

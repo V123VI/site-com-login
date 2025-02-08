@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADASTRO</title>
+</head>
+
+
+
+
+
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+    {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+
+
+
+
+
+<body>
+    <label for="">CADASTRO DE usuario</label>
+    <BR></BR>
+
+
+    <form action="{{url_for('criar.cadastro')}}" method="post" id="form-cadastro">
+    
+
+        <label for="">Coloque o Seu nome de usuario: </label>
+        <input type="text" name="usuario">
+        <br>
+        
+        <label for="">Coloque o email:</label>
+        <input type="text" name="email">
+        <br>
+        <label for="">Coloque a senha: </label>
+        <input type="text" name="senha">
+        <br>
+        
+        <button type="submit">ENVIAR</button>
+
+
+
+    </form>
+    
+</body>
+</html>
