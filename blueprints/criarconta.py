@@ -12,7 +12,7 @@ def cadastro():
 
         print(usuario,senha)
         Usuario.criar_usuario(usuario,email,senha)
-        flash('o usuario foi criado','success')
+        flash(f'o usuario {usuario} foi criado','success')
 
 
     
